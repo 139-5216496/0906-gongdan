@@ -7,6 +7,7 @@
 ## 安装执行parse-server
 
 ```zsh
+mkdir dirPS && cd dirPS // 假设我们在dirPS安装
 sh <(curl -fsSL https://raw.githubusercontent.com/parse-community/parse-server/master/bootstrap.sh)
 npm install -g mongodb-runner // mongoddb-runner只是驱动器，务必保证MongoDB已安装
 mongodb-runner start
@@ -20,7 +21,7 @@ npm start
   npm install -g parse-dashboard
 
   // 安装方式2 (更推荐,后续可以按需修改parse-dashboard功能)
-  mkdir testDir && cd testDir // 假设我们在testDir安装
+  mkdir dirPD && cd dirPD // 假设我们在dirPD安装
   git clone https://github.com/parse-community/parse-dashboard.git
   npm install
   npm link // 把parse-dashboard注册到全局
