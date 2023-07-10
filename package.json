@@ -2,9 +2,16 @@
   "name": "app0629",
   "description": "parse-server for app0629",
   "scripts": {
-    "start": "parse-server config.json"
+    "start": "parse-server config.json",
+    "dev": "nodemon index.js",
+    "build": "node index.js"
   },
   "devDependencies": {
-    "parse-server": "^6.2.0"
+    "@vercel/node": "^2.15.3",
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "now": "^21.0.1",
+    "parse-server": "^6.2.1"
   }
 }
