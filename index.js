@@ -21,12 +21,10 @@ const api = new ParseServer({
     MaxUploadSize: 最大文件上传大小(例如 nginx.conf client _ max _ body _ size 100m;)
    */
 
-  // ...appConfig
-  "appId": "id0629",
-  "masterKey": "key0629",
+  ...appConfig,
   // "databaseURI": "mongodb://localhost:27017/parse", // 如果默认不填写这个字段,会自动创建一个名为parse的数据库
-  // "databaseURI": "mongodb://localhost:27017/demo",
-  "databaseURI": "mongodb+srv://root:root@testdb.rg6zs3y.mongodb.net/?retryWrites=true&w=majority"
+  // "databaseURI": "mongodb://localhost:27017/demo", // 显式指定创建demo数据库
+  "databaseURI": "mongodb+srv://root:root@testdb.rg6zs3y.mongodb.net" // 云数据库,测试用
 });
 api.start(); // 使用实例的start方法进行启动。
 
