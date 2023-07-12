@@ -1,6 +1,6 @@
 ## 环境准备
 - nodejs v14+
-- MongoDB v4+
+- MongoDB v4+ (本次使用远程数据库,测试用)
 
 以上环境版本可参考[官网文档](https://github.com/parse-community/parse-server#compatibility)
 

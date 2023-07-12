@@ -26,7 +26,7 @@ const api = new ParseServer({
   "masterKey": "key0629",
   // "databaseURI": "mongodb://localhost:27017/parse", // 如果默认不填写这个字段,会自动创建一个名为parse的数据库
   // "databaseURI": "mongodb://localhost:27017/demo",
-  "databaseURI": "mongodb+srv://root:root@demo001.ieirou1.mongodb.net/?retryWrites=true&w=majority"
+  "databaseURI": "mongodb+srv://root:root@testdb.rg6zs3y.mongodb.net/?retryWrites=true&w=majority"
 });
 api.start(); // 使用实例的start方法进行启动。
 
