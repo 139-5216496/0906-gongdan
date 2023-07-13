@@ -7,11 +7,12 @@
     "build": "node index.js"
   },
   "devDependencies": {
-    "@vercel/node": "^2.15.3",
     "nodemon": "^2.0.22"
   },
   "dependencies": {
-    "now": "^21.0.1",
-    "parse-server": "^6.2.1"
+    "parse-server": "^5.5.3"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
