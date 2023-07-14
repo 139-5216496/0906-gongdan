@@ -23,8 +23,8 @@ const api = new ParseServer({
   ...appConfig,
   // "databaseURI": "mongodb://localhost:27017/parse", // 如果默认不填写这个字段,会自动创建一个名为parse的数据库
   // "databaseURI": "mongodb://localhost:27017/demo", // 显式指定创建demo数据库
-  // "databaseURI": "mongodb+srv://root:root@testdb.rg6zs3y.mongodb.net" // mongodb云数据库,测试用
-  "databaseURI": "postgres://default:3sUbWNJhyZ7A@ep-fancy-silence-901268.ap-southeast-1.postgres.vercel-storage.com:5432/verceldb?ssl=true&rejectUnauthorized=false"
+  "databaseURI": "mongodb+srv://root:root@testdb.rg6zs3y.mongodb.net" // mongodb云数据库,测试用
+  // "databaseURI": "postgres://default:3sUbWNJhyZ7A@ep-fancy-silence-901268.ap-southeast-1.postgres.vercel-storage.com:5432/verceldb?ssl=true&rejectUnauthorized=false"
 });
 // api.start(); // parse-server 6.x版本 使用实例的start方法进行启动。
 // app.use('/parse', api.app); // 把api.app挂载到中间件

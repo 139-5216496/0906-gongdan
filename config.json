@@ -2,5 +2,6 @@
   "appId": "id0629",
   "masterKey": "key0629",
   "appName": "app0629",
-  "cloud": "./cloud/main"
+  "cloud": "./cloud/main",
+  "databaseURI": "mongodb+srv://root:root@testdb.rg6zs3y.mongodb.net"
 }
