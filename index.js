@@ -31,7 +31,7 @@ const api = new ParseServer({
 const dashboard = new ParseDashboard({
   "apps": [
     {
-      "serverURL": "https://ps.thinkerchan.com/parse",
+      "serverURL": "/parse", // 注意这里的serverURL要和api的挂载路径一致, 此处仅做演示用，生产环境尽量不要公开数据库管理后台地址
       "appId": "id0629",
       "masterKey": "key0629",
       "appName": "demo-0629"
