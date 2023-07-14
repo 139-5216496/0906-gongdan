@@ -1,5 +1,6 @@
 const express = require('express');
 const ParseServer = require('parse-server').ParseServer;
+const ParseDashboard = require('parse-dashboard');
 let appConfig = require('./config.json')
 const app = express();
 const api = new ParseServer({
@@ -26,13 +27,31 @@ const api = new ParseServer({
   "databaseURI": "mongodb+srv://root:root@testdb.rg6zs3y.mongodb.net" // mongodb云数据库,测试用
   // "databaseURI": "postgres://default:3sUbWNJhyZ7A@ep-fancy-silence-901268.ap-southeast-1.postgres.vercel-storage.com:5432/verceldb?ssl=true&rejectUnauthorized=false"
 });
+
+const dashboard = new ParseDashboard({
+  "apps": [
+    {
+      "serverURL": "https://ps.thinkerchan.com/parse",
+      "appId": "id0629",
+      "masterKey": "key0629",
+      "appName": "demo-0629"
+    }
+  ],
+  "users": [
+    {
+      "user":"admin",
+      "pass":"123456",
+      "apps": [{"appId": "id0629","masterKey": "key0629"}]
+    }
+  ]
+});
+
 // api.start(); // parse-server 6.x版本 使用实例的start方法进行启动。
 // app.use('/parse', api.app); // 把api.app挂载到中间件
-
-
 app.use('/parse', api); // parse-server 5.x版本
+app.use('/dashboard', dashboard);
 app.use('/', (req, res) => {
-  res.send('hello parse-server')
+  res.send('hello parse demo')
 })
 
 const port = 1337;
