@@ -50,9 +50,12 @@ const dashboard = new ParseDashboard({
 // app.use('/parse', api.app); // 把api.app挂载到中间件
 app.use('/parse', api); // parse-server 5.x版本
 app.use('/dashboard', dashboard);
-app.use('/', (req, res) => {
-  res.send('hello parse demo')
-})
+
+app.use((req, res) => {
+  res.json({
+    msg:'404'
+  });
+});
 
 const port = 1337;
 app.listen(port, function() {
