@@ -49,7 +49,7 @@ const dashboard = new ParseDashboard({
 // api.start(); // parse-server 6.x版本 使用实例的start方法进行启动。
 // app.use('/parse', api.app); // 把api.app挂载到中间件
 app.use('/parse', api); // parse-server 5.x版本
-app.use('/dashboard', dashboard);
+app.use('/admin', dashboard);
 
 app.use((req, res) => {
   res.json({
