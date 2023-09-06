@@ -3,5 +3,5 @@
   "masterKey": "gongdan",
   "appName": "gongdan",
   "cloud": "./cloud/main",
-  "databaseURI":  "mongodb://root:root@10.16.160.27:27017/gongdan?authSource=admin"
+  "databaseURI":  "mongodb+srv://root:admin123456@gongdan.zdgrjxe.mongodb.net/?retryWrites=true&w=majority"
 }
