@@ -1,7 +1,7 @@
 {
-  "appId": "id0629",
-  "masterKey": "key0629",
-  "appName": "app0629",
+  "appId": "gongdan",
+  "masterKey": "gongdan",
+  "appName": "gongdan",
   "cloud": "./cloud/main",
-  "databaseURI": "mongodb+srv://root:root@testdb.rg6zs3y.mongodb.net"
+  "databaseURI":  "mongodb://root:root@10.16.160.27:27017/gongdan?authSource=admin"
 }

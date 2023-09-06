@@ -1,7 +1,7 @@
 const express = require('express');
 const ParseServer = require('parse-server').ParseServer;
 const ParseDashboard = require('parse-dashboard');
-let appConfig = require('./config.json')
+let appConfig = require('./config.json');
 const app = express();
 const api = new ParseServer({
   /**
@@ -24,26 +24,26 @@ const api = new ParseServer({
   ...appConfig,
   // "databaseURI": "mongodb://localhost:27017/parse", // 如果默认不填写这个字段,会自动创建一个名为parse的数据库
   // "databaseURI": "mongodb://localhost:27017/demo", // 显式指定创建demo数据库
-  "databaseURI": "mongodb+srv://root:root@testdb.rg6zs3y.mongodb.net" // mongodb云数据库,测试用
+  // "databaseURI": "mongodb+srv://root:root@testdb.rg6zs3y.mongodb.net" // mongodb云数据库,测试用
   // "databaseURI": "postgres://default:3sUbWNJhyZ7A@ep-fancy-silence-901268.ap-southeast-1.postgres.vercel-storage.com:5432/verceldb?ssl=true&rejectUnauthorized=false"
 });
 
 const dashboard = new ParseDashboard({
-  "apps": [
+  apps: [
     {
-      "serverURL": "/parse", // 注意这里的serverURL要和api的挂载路径一致, 此处仅做演示用，生产环境尽量不要公开数据库管理后台地址
-      "appId": "id0629",
-      "masterKey": "key0629",
-      "appName": "demo-0629"
-    }
+      serverURL: '/parse', // 注意这里的serverURL要和api的挂载路径一致, 此处仅做演示用，生产环境尽量不要公开数据库管理后台地址
+      appId: 'gongdan',
+      masterKey: 'gongdan',
+      appName: 'gongdan-parse',
+    },
   ],
-  "users": [
+  users: [
     {
-      "user":"admin",
-      "pass":"123456",
-      "apps": [{"appId": "id0629","masterKey": "key0629"}]
-    }
-  ]
+      user: 'admin',
+      pass: '123456',
+      apps: [{ appId: 'gongdan', masterKey: 'gongdan' }],
+    },
+  ],
 });
 
 // api.start(); // parse-server 6.x版本 使用实例的start方法进行启动。
@@ -53,11 +53,11 @@ app.use('/admin', dashboard);
 
 app.use((req, res) => {
   res.json({
-    msg:'404'
+    msg: '404',
   });
 });
 
 const port = 1337;
-app.listen(port, function() {
+app.listen(port, function () {
   console.log('parse-server-example running on port ' + port + '.');
 });
