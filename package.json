@@ -2,9 +2,9 @@
   "name": "app0629",
   "description": "parse-server for app0629",
   "scripts": {
-    "start": "parse-server config.json",
+    "1": "parse-server config.json",
     "dev": "nodemon index.js",
-    "build": "node index.js"
+    "start": "node index.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
