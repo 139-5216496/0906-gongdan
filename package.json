@@ -10,6 +10,9 @@
     "nodemon": "^2.0.22"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "nodemailer": "^6.9.5",
     "parse-dashboard": "^5.1.0",
     "parse-server": "^5.5.3"
   },
